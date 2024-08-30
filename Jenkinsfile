@@ -14,20 +14,16 @@ pipeline {
             }
             post {
                 success {
-                    archiveArtifacts artifacts: '*.log', allowEmptyArchive: true
                     emailext to: 'adeelubuntu753@hotmail.com',
                          subject: "Test Success: Jenkins Pipeline",
                          body: "The unit and integration tests completed successfully.",
-                         from: 'adeelubuntu753@hotmail.com',
-                         attachLog: true
+                         from: 'adeelubuntu753@hotmail.com'
                 }
                 failure {
-                    archiveArtifacts artifacts: '*.log', allowEmptyArchive: true
                     emailext to: 'adeelubuntu753@hotmail.com',
                          subject: "Test Failed: Jenkins Pipeline",
                          body: "The unit and integration tests failed. Please check the logs.",
-                         from: 'adeelubuntu753@hotmail.com',
-                         attachLog: true
+                         from: 'adeelubuntu753@hotmail.com'
                 }
             }
         }
@@ -44,20 +40,16 @@ pipeline {
             }
             post {
                 success {
-                    archiveArtifacts artifacts: '*.log', allowEmptyArchive: true
                     emailext to: 'adeelubuntu753@hotmail.com',
                          subject: "Security Scan Success: Jenkins Pipeline",
                          body: "The security scan completed successfully.",
-                         from: 'adeelubuntu753@hotmail.com',
-                         attachLog: true
+                         from: 'adeelubuntu753@hotmail.com'
                 }
                 failure {
-                    archiveArtifacts artifacts: '*.log', allowEmptyArchive: true
                     emailext to: 'adeelubuntu753@hotmail.com',
                          subject: "Security Scan Failed: Jenkins Pipeline",
                          body: "The security scan failed. Please check the logs.",
-                         from: 'adeelubuntu753@hotmail.com',
-                         attachLog: true
+                         from: 'adeelubuntu753@hotmail.com'
                 }
             }
         }
