@@ -15,18 +15,18 @@ pipeline {
             post {
                 success {
                     archiveArtifacts artifacts: '*.log', allowEmptyArchive: true
-                    emailext to: 'adeeltask6c@hotmail.com',
+                    emailext to: 'adeeltask6c@gmail.com',
                          subject: "Test Success: Jenkins Pipeline",
                          body: "The unit and integration tests completed successfully.",
-                         from: 'adeeltask6c@hotmail.com',
+                         from: 'adeeltask6c@gmail.com',
                          attachLog: true
                 }
                 failure {
                     archiveArtifacts artifacts: '*.log', allowEmptyArchive: true
-                    emailext to: 'adeeltask6c@hotmail.com',
+                    emailext to: 'adeeltask6c@gmail.com',
                          subject: "Test Failed: Jenkins Pipeline",
                          body: "The unit and integration tests failed. Please check the logs.",
-                         from: 'adeeltask6c@hotmail.com',
+                         from: 'adeeltask6c@gmail.com',
                          attachLog: true
                 }
             }
@@ -45,18 +45,18 @@ pipeline {
             post {
                 success {
                     archiveArtifacts artifacts: '*.log', allowEmptyArchive: true
-                    emailext to: 'adeeltask6c@hotmail.com',
+                    emailext to: 'adeeltask6c@gmail.com',
                          subject: "Security Scan Success: Jenkins Pipeline",
                          body: "The security scan completed successfully.",
-                         from: 'adeeltask6c@hotmail.com',
+                         from: 'adeeltask6c@gmail.com',
                          attachLog: true
                 }
                 failure {
                     archiveArtifacts artifacts: '*.log', allowEmptyArchive: true
-                    emailext to: 'adeeltask6c@hotmail.com',
+                    emailext to: 'adeeltask6c@gmail.com',
                          subject: "Security Scan Failed: Jenkins Pipeline",
                          body: "The security scan failed. Please check the logs.",
-                         from: 'adeeltask6c@hotmail.com',
+                         from: 'adeeltask6c@gmail.com',
                          attachLog: true
                 }
             }
